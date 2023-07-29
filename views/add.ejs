@@ -1,0 +1,42 @@
+<!-- <%- include('partials/header') %>
+
+<h1>Add</h1>
+<div class="formContainer">
+    <form action="/add" method="post">
+        <div class="form-floating mb-3">
+            <input type="text" name="title" class="form-control" id="title" placeholder="title">
+            <label for="floatingInput">Title</label>
+        </div>
+        <div class="form-floating">
+            <Textarea class="form-control" name="content" id="content" placeholder="content"></Textarea>
+            <label for="floatingTextarea">Content</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+
+</div>
+ -->
+
+<%- include('partials/header') %>
+
+<h1>Compose</h1>
+
+<div>
+    <form action="/add" method="post">
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input type="text" name="title" class="form-control" id="title" autocomplete="off">
+        </div>
+    
+        <div class="mb-3">
+          <label for="content" class="form-label">Post</label>
+          <textarea name="content" id="content" class="form-control" cols="30" rows="7"></textarea>
+        </div>
+    
+        <button type="submit" class="btn btn-primary submit-form">Publish</button>
+    </form>
+    
+</div>
+
+
+<%- include('partials/footer') %>

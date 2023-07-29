@@ -1,0 +1,20 @@
+<%- include('partials/header') %>
+
+
+<h1>Edit</h1>
+
+<div class="editContainer container-fluid">
+    <form action="/edit/<%= note.id %>" method="post">
+        <div class="form-floating mb-3">
+            <label for="floatingInput">Title</label>
+            <input type="text" name="title" class="form-control" id="title" placeholder="title" value="<%= note.title %>">
+        </div>
+        <div class="form-floating">
+            <label for="floatingTextarea">Content</label>
+            <Textarea class="form-control" name="content" id="content" placeholder="content"><%= note.content %></Textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+</div>
+
+<%- include('partials/footer') %>

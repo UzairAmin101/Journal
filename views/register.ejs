@@ -1,0 +1,16 @@
+<%- include('partials/headerLoggedOut') %>
+
+<h1>Register</h1>
+<form action="/register" method="post">
+    <div class="mb-3">
+      <label for="InputEmail" class="form-label">Email address</label>
+      <input type="email" name="email" class="form-control" id="InputEmail">
+    </div>
+    <div class="mb-3">
+      <label for="InputPassword1" class="form-label">Password</label>
+      <input type="password" name="password" class="form-control" id="InputPassword">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<%- include('partials/footer') %>

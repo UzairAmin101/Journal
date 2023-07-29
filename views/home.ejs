@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+
+
+<% if (items.length===0) { %>
+    <p>No items found</p>
+  <% } else { %>
+      <div>
+          <% items.forEach(function(item) { %>
+              <div>
+                  <h3><%= item.title %></h3>
+                  <p><%= item.content %></p>
+                  <form action="/delete" method="post">
+                      <button type="submit" class="btn btn-primary" name="id" value=<%= item.id %> >delete</button>
+                  </form>
+                  <a href="/edit/<%= item.id %>" class="edit btn btn-primary" >Edit</a>
+              </div>
+          <% }) %>
+      </div>
+  <% } %>
+
+
+<%- include('partials/footer') %>
